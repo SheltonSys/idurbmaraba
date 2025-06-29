@@ -1,0 +1,520 @@
+{% extends 'site/base_site.html' %}
+{% load static %}
+
+{% block title %}Transparência - IDURB Marabá{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<!-- HERO - Transparência -->
+<section class="text-white py-5 text-center position-relative" style="background-image: url('{% static 'assets/dist/img/transparencia.jpg' %}'); background-size: cover; background-position: center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold">Transparência</h1>
+    <p class="lead">Compromisso com a ética, clareza na gestão e participação cidadã.</p>
+  </div>
+</section>
+
+
+<!-- INDICADORES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <i class="fas fa-donate fa-2x text-success mb-2"></i>
+          <h5 class="fw-bold">R$ 12,3 Mi</h5>
+          <p class="text-muted small">Orçamento 2025</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <i class="fas fa-clipboard-list fa-2x text-success mb-2"></i>
+          <h5 class="fw-bold">27 Projetos</h5>
+          <p class="text-muted small">em execução</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <i class="fas fa-user-check fa-2x text-success mb-2"></i>
+          <h5 class="fw-bold">92%</h5>
+          <p class="text-muted small">execução orçamentária</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <i class="fas fa-calendar-check fa-2x text-success mb-2"></i>
+          <h5 class="fw-bold">Atualizado</h5>
+          <p class="text-muted small">Última atualização: Mai/2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOADS DE DOCUMENTOS -->
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success fw-bold text-center mb-4">Documentos Oficiais</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% comment %}Exemplos estáticos - você pode substituir por loop de queryset{% endcomment %}
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary">Balancete Mensal - Março/2025</h6>
+            <p class="small text-muted">Publicado em 05/04/2025</p>
+            <a href="#" class="btn btn-sm btn-outline-success">📄 Baixar PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary">Relatório de Execução 2024</h6>
+            <p class="small text-muted">Publicado em 28/02/2025</p>
+            <a href="#" class="btn btn-sm btn-outline-success">📄 Ver Documento</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary">Contratos Vigentes</h6>
+            <p class="small text-muted">Atualizado em 10/05/2025</p>
+            <a href="#" class="btn btn-sm btn-outline-success">📄 Acessar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINHA DO TEMPO -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-5">Linha do Tempo da Transparência</h4>
+    <ul class="timeline list-unstyled">
+      <li class="mb-4 position-relative ps-4 border-start border-success">
+        <span class="position-absolute top-0 start-0 translate-middle bg-success rounded-circle p-2"></span>
+        <h6 class="fw-bold">Março 2025</h6>
+        <p class="text-muted">Publicação do balancete do 1º trimestre do exercício fiscal.</p>
+      </li>
+      <li class="mb-4 position-relative ps-4 border-start border-success">
+        <span class="position-absolute top-0 start-0 translate-middle bg-success rounded-circle p-2"></span>
+        <h6 class="fw-bold">Janeiro 2025</h6>
+        <p class="text-muted">Relatório de Planejamento Anual divulgado à população.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success text-center mb-4">Perguntas Frequentes</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">Como fazer um pedido de informação?</button></h2>
+        <div id="faq1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Acesse o formulário eletrônico clicando no botão abaixo ou dirija-se à sede do IDURB.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">O IDURB publica contratos e convênios?</button></h2>
+        <div id="faq2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Sim, todos os contratos são publicados nesta página, com acesso livre à população.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO DE ACESSO À INFORMAÇÃO -->
+<section class="bg-success text-white text-center py-5">
+  <div class="container">
+    <h4 class="mb-3">Solicite informações públicas do IDURB</h4>
+    <a href="#" class="btn btn-outline-light btn-lg"><i class="fas fa-lock-open me-2"></i>Formulário de Acesso</a>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-4">Despesas Recentes</h4>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="table-success">
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10/06/2025</td>
+            <td>Serviços de topografia urbana</td>
+            <td>R$ 25.600,00</td>
+            <td>Obras</td>
+          </tr>
+          <tr>
+            <td>03/06/2025</td>
+            <td>Aquisição de materiais gráficos</td>
+            <td>R$ 3.200,00</td>
+            <td>Comunicação</td>
+          </tr>
+          <tr>
+            <td>28/05/2025</td>
+            <td>Consultoria jurídica fundiária</td>
+            <td>R$ 12.750,00</td>
+            <td>Serviços</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success text-center mb-4">Galeria de Entregas</h4>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'assets/dist/img/obra1.jpg' %}" class="card-img-top" alt="Entrega 1" data-bs-toggle="modal" data-bs-target="#img1">
+          <div class="card-body">
+            <h6 class="text-primary">Reforma da Praça da Juventude</h6>
+            <p class="text-muted small">Finalizada em março de 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'assets/dist/img/obra2.jpg' %}" class="card-img-top" alt="Entrega 2" data-bs-toggle="modal" data-bs-target="#img2">
+          <div class="card-body">
+            <h6 class="text-primary">Nova iluminação pública na Folha 33</h6>
+            <p class="text-muted small">Em operação desde abril de 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card da Entrega 3 -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100 shadow-sm border-0">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#img3">
+      <img src="{% static 'assets/dist/img/obra3.jpg' %}" class="card-img-top" alt="Entrega 3">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title text-primary">Urbanização do Setor Bela Vista</h5>
+      <p class="card-text text-muted">Concluída em maio de 2025</p>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal de imagem 1 -->
+<div class="modal fade" id="img1" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <img src="{% static 'assets/dist/img/obra1.jpg' %}" class="img-fluid rounded" alt="Entrega 1">
+    </div>
+  </div>
+</div>
+
+<!-- Modal de imagem 2 -->
+<div class="modal fade" id="img2" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <img src="{% static 'assets/dist/img/obra2.jpg' %}" class="img-fluid rounded" alt="Entrega 2">
+    </div>
+  </div>
+</div>
+
+<!-- Modal de imagem 3 -->
+<div class="modal fade" id="img3" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <img src="{% static 'assets/dist/img/obra3.jpg' %}" class="img-fluid rounded" alt="Entrega 3">
+    </div>
+  </div>
+</div>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-4">Links Úteis</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+      <div class="col">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <i class="fas fa-university fa-2x text-success mb-3"></i>
+              <h6 class="fw-bold">Portal da Transparência</h6>
+              <p class="small text-muted">Acesse dados orçamentários oficiais</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <i class="fas fa-archive fa-2x text-success mb-3"></i>
+              <h6 class="fw-bold">Prestação de Contas</h6>
+              <p class="small text-muted">Relatórios contábeis e demonstrativos</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <i class="fas fa-people-carry fa-2x text-success mb-3"></i>
+              <h6 class="fw-bold">Controle Social</h6>
+              <p class="small text-muted">Conselhos, reuniões e audiências</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success text-center mb-4"><i class="fas fa-gavel me-2"></i>Licitações Recentes</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead class="table-success">
+          <tr>
+            <th>Nº</th>
+            <th>Objeto</th>
+            <th>Modalidade</th>
+            <th>Data de Abertura</th>
+            <th>Edital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001/2025</td>
+            <td>Construção de unidades habitacionais</td>
+            <td>Concorrência Pública</td>
+            <td>15/07/2025</td>
+            <td><a href="#" class="btn btn-sm btn-outline-success">Ver</a></td>
+          </tr>
+          <tr>
+            <td>014/2025</td>
+            <td>Contratação de consultoria técnica</td>
+            <td>Tomada de Preço</td>
+            <td>08/07/2025</td>
+            <td><a href="#" class="btn btn-sm btn-outline-success">Download</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-4"><i class="fas fa-users me-2"></i>Equipe Responsável</h4>
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <img src="{% static 'assets/dist/img/pessoa1.jpg' %}" class="rounded-circle mb-3" width="80" height="80" alt="Responsável 1">
+            <h6 class="fw-bold">Ana Beatriz Lima</h6>
+            <p class="small text-muted">Coordenadora de Prestação de Contas</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <img src="{% static 'assets/dist/img/pessoa2.jpg' %}" class="rounded-circle mb-3" width="80" height="80" alt="Responsável 2">
+            <h6 class="fw-bold">Rafael Nunes</h6>
+            <p class="small text-muted">Transparência e Dados Públicos</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <img src="{% static 'assets/dist/img/pessoa3.jpg' %}" class="rounded-circle mb-3" width="80" height="80" alt="Responsável 3">
+            <h6 class="fw-bold">Camila Ferreira</h6>
+            <p class="small text-muted">Ouvidoria e Atendimento ao Cidadão</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h4 class="text-success mb-4 text-center">Execução Orçamentária</h4>
+    <canvas id="graficoOrcamento" height="100"></canvas>
+  </div>
+</section>
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h4 class="text-success text-center mb-4">Análise Visual das Despesas</h4>
+    <div class="mb-5">
+      <canvas id="graficoLinhaDespesas" height="100"></canvas>
+    </div>
+    <div>
+      <canvas id="graficoBarrasHorizontais" height="120"></canvas>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('graficoOrcamento').getContext('2d');
+  const graficoOrcamento = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Obras', 'Serviços', 'Comunicação', 'Equipamentos', 'Transporte'],
+      datasets: [{
+        label: 'Execução (R$)',
+        data: [25600, 12750, 3200, 8700, 6500],
+        backgroundColor: 'rgba(25, 135, 84, 0.6)',
+        borderColor: 'rgba(25, 135, 84, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'Execução Orçamentária - Maio/2025'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(value) {
+              return 'R$ ' + value.toLocaleString('pt-BR');
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+<script>
+  const ctxLinha = document.getElementById('graficoLinhaDespesas').getContext('2d');
+  const graficoLinha = new Chart(ctxLinha, {
+    type: 'line',
+    data: {
+      labels: ['28/05', '03/06', '10/06'],
+      datasets: [{
+        label: 'Valor das Despesas (R$)',
+        data: [12750, 3200, 25600],
+        fill: true,
+        backgroundColor: 'rgba(25, 135, 84, 0.2)',
+        borderColor: 'rgba(25, 135, 84, 1)',
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Evolução das Despesas Recentes'
+        },
+        legend: {
+          position: 'top'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: value => 'R$ ' + value.toLocaleString('pt-BR')
+          }
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  const ctxBarra = document.getElementById('graficoBarrasHorizontais').getContext('2d');
+  const graficoBarra = new Chart(ctxBarra, {
+    type: 'bar',
+    data: {
+      labels: ['Obras', 'Comunicação', 'Serviços'],
+      datasets: [{
+        label: 'Total por Categoria (R$)',
+        data: [25600, 3200, 12750],
+        backgroundColor: [
+          'rgba(25, 135, 84, 0.6)',
+          'rgba(13, 202, 240, 0.6)',
+          'rgba(255, 193, 7, 0.6)'
+        ],
+        borderColor: [
+          'rgba(25, 135, 84, 1)',
+          'rgba(13, 202, 240, 1)',
+          'rgba(255, 193, 7, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        title: {
+          display: true,
+          text: 'Despesas por Categoria'
+        },
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          ticks: {
+            callback: value => 'R$ ' + value.toLocaleString('pt-BR')
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+
+{% endblock %}

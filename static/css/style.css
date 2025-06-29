@@ -1,0 +1,406 @@
+/* ===== RESET BÁSICO ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+main {
+  padding: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== TOPO INSTITUCIONAL ===== */
+.top-institucional {
+  background-color: #0F5259;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.top-institucional a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+/* ===== NAVBAR PRINCIPAL ===== */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #004aad;
+}
+
+.navbar .nav-link {
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: #004aad;
+}
+
+.navbar .nav-link.active {
+  color: #004aad !important;
+  background-color: #fff !important;
+  border-bottom: 3px solid #004aad;
+  border-radius: 0;
+}
+
+/* ===== CARROSSEL ===== */
+/* === BANNER / CARROSSEL === */
+.banner-img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* faixa escura horizontal */
+  padding: 2rem 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.carousel-caption h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+}
+
+/* === RESPONSIVO MOBILE === */
+@media (max-width: 768px) {
+  .banner-img {
+    height: 280px;
+  }
+
+  .carousel-caption {
+    padding: 1rem 1.2rem;
+    max-width: 90%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.3rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===== SEÇÃO BOAS-VINDAS ===== */
+.welcome-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(90deg, #007a33, #004aad);
+  color: white;
+}
+
+.welcome-overlay {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .welcome-overlay {
+    padding: 2rem 1rem;
+  }
+}
+
+  .navbar .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .carousel-caption {
+    padding: 1rem;
+    font-size: 0.9rem;
+    max-width: 95%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+/* ===== SEÇÃO NOTÍCIAS E SERVIÇOS ===== */
+.noticias-servicos {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f8f9fa;
+}
+
+.noticias-servicos h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.noticias-servicos .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.noticias-servicos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.noticias-servicos .card-title {
+  color: #004aad;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.noticias-servicos .card-text {
+  font-size: 0.87rem;
+  color: #555;
+}
+
+.noticias-servicos .list-group-item {
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.noticias-servicos .list-group-item i {
+  font-size: 1rem;
+  color: #004aad;
+}
+
+.noticias-servicos .list-group-item:hover {
+  background-color: #f0f0f0;
+  border-left: 4px solid #004aad;
+  color: #004aad;
+}
+
+
+
+
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-body h6 {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+
+
+.card-servico {
+  display: flex;
+  align-items: center;
+  background-color: #004aad;
+  color: #fff;
+  padding: 1.2rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.card-servico i {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.card-servico span {
+  flex: 1;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+
+.section-title {
+  position: relative;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #dee2e6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: currentColor; /* usa a cor do texto, ex: text-primary ou text-success */
+}
+
+
+
+
+.servicos-wrapper {
+  background: transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.servico-card {
+  background-color: #004aad;
+  padding: 1rem 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex: 1;
+}
+
+.servico-card:hover {
+  transform: scale(1.02);
+  background-color: #003b8e;
+}
+
+.servico-card i {
+  font-size: 1.3rem;
+}
+
+
+
+.sobre-idurb h4 {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.sobre-idurb p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.img-container img {
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+
+.sistemas-section {
+  background-color: #f5f7fa;
+}
+
+.sistema-card {
+  background: linear-gradient(to bottom, #004aad, #005db8);
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sistema-card:hover {
+  transform: translateY(-4px);
+}
+
+.sistema-header {
+  padding: 1.2rem 0;
+  background-color: #003580;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.sistema-body {
+  padding: 1.2rem;
+  background-color: transparent;
+}
+
+.sistema-card h6 {
+  font-size: 0.92rem;
+  color: white;
+}
+
+.sistema-card .btn {
+  font-size: 0.8rem;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+}

@@ -1,0 +1,59 @@
+{% load static %}
+
+<!-- === TOPO INSTITUCIONAL (verde) === -->
+<div class="top-institucional text-white py-1 small" style="background-color: #007a33; font-size: 0.85rem;">
+  <div class="container d-flex justify-content-between flex-wrap align-items-center">
+    <div class="d-flex align-items-center flex-wrap gap-2">
+      <i class="fas fa-envelope"></i> contato@maraba.pa.gov.br
+      <span class="mx-2">|</span>
+      <i class="fas fa-map-marker-alt"></i> Folha 31 – Paço Municipal – Nova Marabá
+      <span class="mx-2">|</span>
+      <i class="fas fa-phone-alt"></i> (94) 3322-2982
+    </div>
+    <div class="d-flex gap-2 mt-1 mt-sm-0">
+      <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- === NAVBAR PRINCIPAL === -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="/">
+      <img src="{% static 'assets/dist/img/prefeituraMaraba.png' %}" alt="Prefeitura Marabá" width="130" class="me-2">
+      <img src="{% static 'assets/dist/img/logoidurb.png' %}" alt="IDURB Marabá" width="130" class="me-2">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="mainNavbar">
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %}active text-white bg-success rounded px-3 fw-bold{% endif %}" href="/">INÍCIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/oidurb/' %}active fw-bold text-success{% endif %}" href="/oidurb/">O IDURB</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/legislacao/' %}active fw-bold text-success{% endif %}" href="/legislacao/">LEGISLAÇÃO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/servicos/' %}active fw-bold text-success{% endif %}" href="/servicos/">SERVIÇOS ON-LINE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/transparencia/' %}active fw-bold text-success{% endif %}" href="/transparencia/">TRANSPARÊNCIA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/mapa/' %}active fw-bold text-success{% endif %}" href="/mapa/">MAPA DO SITE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/contato/' %}active fw-bold text-success{% endif %}" href="/contato/">FALE CONOSCO</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

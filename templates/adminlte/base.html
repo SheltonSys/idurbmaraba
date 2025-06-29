@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}IDURB - Marabá{% endblock %}</title>
+
+  <!-- Fontes e Estilos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome-free/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dist/css/adminlte.min.css' %}">
+  
+  <!-- Estilo customizado opcional -->
+  {% block extra_css %}{% endblock %}
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  {% include 'partials/navbar.html' %}
+
+  <!-- Sidebar -->
+  {% include 'partials/sidebar.html' %}
+
+  <!-- Conteúdo principal -->
+  <div class="content-wrapper">
+    
+    <!-- Cabeçalho da página -->
+    <div class="content-header">
+      <div class="container-fluid">
+        {% block page_header %}
+        <!-- Conteúdo do cabeçalho aqui -->
+        {% endblock %}
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content">
+      <div class="container-fluid">
+        {% block content %}
+        <!-- Conteúdo principal aqui -->
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  {% include 'partials/footer.html' %}
+
+  <!-- Sidebar adicional -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <div class="p-3">
+      <h5>Configurações</h5>
+      <p>Conteúdo extra opcional</p>
+    </div>
+  </aside>
+</div>
+
+<!-- Scripts essenciais -->
+<script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/dist/js/adminlte.min.js' %}"></script>
+
+<!-- Scripts adicionais opcionais -->
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

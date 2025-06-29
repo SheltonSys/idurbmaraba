@@ -1,0 +1,140 @@
+
+{% extends 'adminlte/base.html' %}
+{% load static %}
+{% block title %}IDURB Marabá - Instituto de Desenvolvimento Urbano{% endblock %}
+
+{% block content %}
+<section class="content">
+  <div class="container-fluid p-0">
+
+    <!-- BANNER PRINCIPAL -->
+    <div class="position-relative">
+      <img src="{% static 'img/banner.jpg' %}" alt="Banner IDURB" class="img-fluid w-100">
+      <div class="position-absolute text-white d-flex flex-column justify-content-center align-items-center"
+           style="top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);">
+        <img src="{% static 'img/logo-idurb.png' %}" width="150">
+        <h2 class="mt-3 text-center">Trabalhando o Desenvolvimento Urbano e a Regularização Fundiária de Marabá</h2>
+        <div class="mt-3 d-flex gap-3">
+          <a href="/transparencia/" class="btn btn-outline-light">Transparência</a>
+
+          <a href="{% url 'contato' %}" class="btn btn-outline-light"><i class="fas fa-comments"></i> Fale Conosco</a>
+          <a href="#" class="btn btn-outline-light"><i class="fas fa-users"></i> CONDU</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO NOTÍCIAS + SERVIÇOS -->
+    <div class="row p-4">
+      <div class="col-md-8">
+        <h3 class="mb-3 text-primary">Notícias</h3>
+        <div class="row">
+          {% for noticia in noticias %}
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="{{ noticia.imagem.url }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ noticia.titulo }}</h5>
+                <p class="card-text">{{ noticia.resumo|truncatewords:20 }}</p>
+                <a href="{% url 'noticias:detalhe' noticia.id %}" class="btn btn-sm btn-primary">Leia mais</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3 class="mb-3 text-secondary">Serviços</h3>
+        {% for servico in servicos %}
+        <div class="card mb-2 bg-primary text-white">
+          <div class="card-body d-flex align-items-center">
+            <i class="fas fa-file-alt fa-2x mr-3"></i>
+            <div>
+              <h6 class="mb-0">{{ servico.nome }}</h6>
+              <small><a href="{% url 'servicos:detalhe' servico.id %}" class="text-white">Acessar</a></small>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- VÍDEO -->
+    <div class="bg-primary p-4 text-white text-center">
+      <h3>Conheça Marabá</h3>
+      <div class="embed-responsive embed-responsive-16by9 mt-3">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SEU_VIDEO_ID" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- SOBRE O IDURB -->
+    <div class="row p-4 bg-light">
+      <div class="col-md-6">
+        <h3 class="text-primary">Sobre o IDURB</h3>
+        <p>
+          O Instituto de Desenvolvimento Urbano de Marabá - IDURB tem como missão planejar, organizar e coordenar
+          ações voltadas ao desenvolvimento urbano e à regularização fundiária da cidade, promovendo bem-estar,
+          inclusão e qualidade de vida à população.
+        </p>
+        <a href="{% url 'sobre' %}" class="btn btn-outline-primary">Leia mais >></a>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/sobre.jpg' %}" alt="IDURB Marabá" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <!-- LINKS SISTEMAS -->
+    <div class="row text-center p-4">
+      {% for sistema in sistemas %}
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white">
+          <div class="card-body">
+            <h5>{{ sistema.nome }}</h5>
+            <a href="{{ sistema.link }}" class="btn btn-light mt-2">Acessar</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- CONTATO -->
+    <div class="bg-white p-4" id="contato">
+      <h3 class="text-primary">Fale Conosco</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <form method="POST" action="{% url 'contato' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="text" name="nome" class="form-control" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <input type="text" name="telefone" class="form-control" placeholder="Seu telefone">
+            </div>
+            <div class="form-group">
+              <input type="text" name="motivo" class="form-control" placeholder="Motivo do contato">
+            </div>
+            <div class="form-group">
+              <textarea name="mensagem" class="form-control" rows="4" placeholder="Sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Horário de atendimento:</strong><br>08h às 12h (público)<br>12h às 14h (interno)</p>
+          <p><strong>Endereço:</strong><br>Rua Exemplo, Qd 01C - Centro, Marabá, Pará</p>
+          <p><strong>Email:</strong> contato@idurbmaraba.pa.gov.br</p>
+          <p><strong>Telefone:</strong> (94) 91234-5678</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-primary text-white text-center py-3">
+      <div>Direitos reservados | IDURB Marabá</div>
+    </footer>
+
+  </div>
+</section>
+{% endblock %}

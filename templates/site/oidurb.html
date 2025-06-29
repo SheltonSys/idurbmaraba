@@ -1,0 +1,382 @@
+{% extends "site/base_site.html" %}
+{% load static %}
+
+{% block title %}Sobre o IDURB - Instituto de Desenvolvimento Urbano de Marabá{% endblock %}
+
+{% block content %}
+
+<section class="py-5 text-white text-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "assets/dist/img/bg-idurb.jpg" %}') center/cover no-repeat;">
+  <div class="container">
+    <h2 class="display-5 fw-bold">Sobre o IDURB</h2>
+    <p class="fs-5">Instituto de Desenvolvimento Urbano de Marabá</p>
+  </div>
+</section>
+
+
+<!-- CARROSSEL DE ENTREGAS -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="mb-4 text-primary text-center">Ações e Entregas</h3>
+    <div id="entregasCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active">
+          <img src="{% static 'assets/dist/img/entrega1.webp' %}" class="d-block w-100" alt="Entrega 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+            <h5>Regularização em bairros da Nova Marabá</h5>
+            <p>Mais de 100 famílias beneficiadas com títulos definitivos</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/dist/img/entrega2.webp' %}" class="d-block w-100" alt="Entrega 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+            <h5>Nova sede do IDURB</h5>
+            <p>Espaço moderno para melhor atender a população</p>
+          </div>
+        </div>
+        <!-- Adicione mais .carousel-item conforme necessário -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#entregasCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#entregasCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO + IMAGEM -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <img src="{% static 'assets/dist/img/sobre-idurb.webp' %}" alt="IDURB Marabá" class="img-fluid rounded shadow-sm border">
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded shadow-sm h-100">
+          <h3 class="text-primary mb-3"><i class="fas fa-lightbulb me-2"></i>Nossa Missão</h3>
+          <p class="text-muted fs-6">
+            O <strong>IDURB</strong> é responsável pelo planejamento, execução e acompanhamento das políticas de desenvolvimento urbano e fundiário em Marabá.
+            Nosso foco está na modernização, regularização fundiária e melhoria da infraestrutura urbana, sempre priorizando a qualidade de vida da população.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISÃO + VALORES -->
+<section class="py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title text-success"><i class="fas fa-eye me-2"></i>Visão</h4>
+            <p class="card-text text-muted">Ser referência em desenvolvimento urbano sustentável na região Norte do Brasil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title text-success"><i class="fas fa-handshake me-2"></i>Valores</h4>
+            <ul class="text-muted mb-0">
+              <li>Transparência e ética</li>
+              <li>Inovação e eficiência</li>
+              <li>Compromisso social</li>
+              <li>Gestão participativa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEO INSTITUCIONAL -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="mb-4 text-center text-primary">Conheça o IDURB</h3>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Vídeo institucional do IDURB" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- LINHA DO TEMPO -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="mb-4 text-center text-success">Linha do Tempo de Ações</h3>
+    <ul class="timeline list-unstyled">
+      <li class="mb-4">
+        <h5 class="text-primary">2021</h5>
+        <p class="text-muted">Criação do IDURB e início dos primeiros projetos de urbanização.</p>
+      </li>
+      <li class="mb-4">
+        <h5 class="text-primary">2022</h5>
+        <p class="text-muted">Início da regularização fundiária em diversos bairros.</p>
+      </li>
+      <li class="mb-4">
+        <h5 class="text-primary">2023</h5>
+        <p class="text-muted">Lançamento do Mapa Urbano Interativo e ampliação da equipe técnica.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center text-primary mb-4">Nossa Equipe</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center">
+          <img src="{% static 'assets/dist/img/equipe1.jpg' %}" class="card-img-top rounded-top" alt="Coordenador">
+          <div class="card-body">
+            <h5 class="card-title">João Silva</h5>
+            <p class="card-text text-muted">Diretor Executivo</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center">
+          <img src="{% static 'assets/dist/img/equipe2.webp' %}" class="card-img-top rounded-top" alt="Engenheira">
+          <div class="card-body">
+            <h5 class="card-title">Maria Oliveira</h5>
+            <p class="card-text text-muted">Engenheira Urbana</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0 shadow-sm text-center">
+          <img src="{% static 'assets/dist/img/equipe3.jpg' %}" class="card-img-top rounded-top" alt="Analista">
+          <div class="card-body">
+            <h5 class="card-title">Carlos Souza</h5>
+            <p class="card-text text-muted">Analista de Projetos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center text-success mb-4">Indicadores de Impacto</h3>
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <i class="fas fa-users fa-2x text-primary mb-2"></i>
+        <h4>+2.500</h4>
+        <p>Famílias Atendidas</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-map-marked-alt fa-2x text-primary mb-2"></i>
+        <h4>37 bairros</h4>
+        <p>Com projetos ativos</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-tree-city fa-2x text-primary mb-2"></i>
+        <h4>120 ha</h4>
+        <p>De áreas regularizadas</p>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-calendar-check fa-2x text-primary mb-2"></i>
+        <h4>9</h4>
+        <p>Projetos entregues</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center text-primary mb-4">Evolução dos Projetos</h3>
+    <canvas id="graficoProjetos" height="100"></canvas>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-4 text-success">Perguntas Frequentes</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            O que é regularização fundiária?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Processo que garante o direito legal à moradia em áreas ocupadas informalmente.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Como solicitar um projeto de urbanização?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Você pode solicitar através do formulário de atendimento no site ou presencialmente na sede do IDURB.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4 text-primary">Área de Atuação</h3>
+    <div class="ratio ratio-16x9">
+      <iframe 
+        src="https://www.google.com/maps/d/u/0/embed?mid=1aff2ciU-ZoydiJOavu9JKx18TPn_Cv0&ehbc=2E312F" 
+        width="640" height="480" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5">
+  <div class="container text-center">
+    <h4 class="text-success mb-4">Indicadores Geográficos</h4>
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="border rounded shadow-sm p-3">
+          <i class="fas fa-map-marked-alt fa-2x text-primary mb-2"></i>
+          <h5 class="mb-1">37 Bairros</h5>
+          <small class="text-muted">Com projetos ativos</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="border rounded shadow-sm p-3">
+          <i class="fas fa-home fa-2x text-success mb-2"></i>
+          <h5 class="mb-1">2.500 Famílias</h5>
+          <small class="text-muted">Atendidas com regularização</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="border rounded shadow-sm p-3">
+          <i class="fas fa-map fa-2x text-warning mb-2"></i>
+          <h5 class="mb-1">12 km²</h5>
+          <small class="text-muted">De áreas mapeadas</small>
+        </div>
+      </div>
+      <div class="col">
+        <div class="border rounded shadow-sm p-3">
+          <i class="fas fa-industry fa-2x text-danger mb-2"></i>
+          <h5 class="mb-1">5 Zonas</h5>
+          <small class="text-muted">De expansão urbana</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-center text-primary mb-4">Evolução dos Projetos</h4>
+    <div class="d-flex justify-content-around text-center">
+      <div>
+        <div style="height: 40px; width: 20px; background-color: #198754;"></div>
+        <small class="d-block">2021</small>
+      </div>
+      <div>
+        <div style="height: 80px; width: 20px; background-color: #198754;"></div>
+        <small class="d-block">2022</small>
+      </div>
+      <div>
+        <div style="height: 120px; width: 20px; background-color: #198754;"></div>
+        <small class="d-block">2023</small>
+      </div>
+      <div>
+        <div style="height: 150px; width: 20px; background-color: #198754;"></div>
+        <small class="d-block">2024</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-center text-success mb-4">Perguntas Frequentes</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            O que é regularização fundiária?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show">
+          <div class="accordion-body">É o processo que garante o direito legal à moradia nas áreas ocupadas informalmente.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            Como obter o título da minha casa?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse">
+          <div class="accordion-body">Você pode se inscrever nos projetos ativos do IDURB e apresentar a documentação necessária.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 text-center">
+  <div class="container">
+    <p class="mb-2 text-muted">Para explorar diretamente o mapa completo:</p>
+    <a href="https://www.google.com/maps/d/u/0/viewer?mid=1aff2ciU-ZoydiJOavu9JKx18TPn_Cv0&usp=sharing" class="btn btn-outline-primary" target="_blank">
+      Ver Mapa Interativo Completo
+    </a>
+  </div>
+</section>
+
+
+
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+  const ctx = document.getElementById('graficoProjetos').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2021', '2022', '2023', '2024'],
+      datasets: [{
+        label: 'Projetos Concluídos',
+        data: [2, 5, 8, 11],
+        backgroundColor: 'rgba(25, 135, 84, 0.6)'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      }
+    }
+  });
+</script>
+
+
+{% endblock %}

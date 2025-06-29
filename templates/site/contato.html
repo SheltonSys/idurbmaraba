@@ -1,0 +1,307 @@
+{% extends 'site/base_site.html' %}
+{% load static %}
+
+{% block title %}Fale Conosco - IDURB Marabá{% endblock %}
+
+{% block content %}
+
+<!-- HERO - Fale Conosco -->
+<section class="bg-dark text-white py-5 mb-5" style="background-image: url('{% static 'assets/dist/img/fale-conosco.jpg' %}'); background-size: cover; background-position: center;">
+  <div class="container text-center">
+    <h1 class="fw-bold display-4">Fale Conosco</h1>
+    <p class="lead">Estamos aqui para ouvir você. Envie sua mensagem, sugestão ou solicitação.</p>
+  </div>
+</section>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="row g-5">
+      <!-- FORMULÁRIO -->
+      <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-primary mb-3">Formulário de Contato</h5>
+            <form method="post" action="">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="{{ request.POST.nome }}" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ request.POST.email }}" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required>{{ request.POST.mensagem }}</textarea>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFORMAÇÕES DE CONTATO -->
+      <div class="col-md-6">
+        <div class="bg-white rounded shadow-sm p-4 h-100">
+          <h5 class="text-success mb-3"><i class="fas fa-map-marker-alt me-2"></i>Endereço</h5>
+          <p>Folha 31 – Paço Municipal – Nova Marabá</p>
+
+          <h5 class="text-success mt-4"><i class="fas fa-envelope me-2"></i>E-mail</h5>
+          <p><a href="mailto:contato@maraba.pa.gov.br">contato@maraba.pa.gov.br</a></p>
+
+          <h5 class="text-success mt-4"><i class="fas fa-phone-alt me-2"></i>Telefone</h5>
+          <p>(94) 3322-2982</p>
+
+          <div class="mt-4">
+            <iframe 
+              src="https://www.google.com/maps?q=Folha+31,+Nova+Marab%C3%A1&output=embed" 
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTROS MEIOS DE CONTATO -->
+    <div class="row mt-5">
+      <div class="col text-center">
+        <h5 class="text-muted">Também estamos nas redes sociais:</h5>
+        <div class="mt-3">
+          <a href="#" class="btn btn-outline-success me-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="btn btn-outline-success me-2"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#" class="btn btn-outline-success"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success mb-3">Atendimento Presencial</h4>
+    <p>Nosso horário de atendimento é de <strong>segunda a sexta</strong>, das <strong>08h às 14h</strong>, na sede do IDURB.</p>
+    <p>Documentos, requerimentos e informações podem ser solicitados presencialmente mediante agendamento prévio.</p>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success mb-4">Documentos Úteis</h4>
+    <table class="table table-bordered table-hover bg-white">
+      <thead class="table-success">
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Formulário de Solicitação</td>
+          <td>Requerimento para solicitações gerais</td>
+          <td><a href="#" class="btn btn-sm btn-outline-success">Baixar PDF</a></td>
+        </tr>
+        <tr>
+          <td>Manual de Atendimento</td>
+          <td>Guia com orientações ao cidadão</td>
+          <td><a href="#" class="btn btn-sm btn-outline-success">Baixar PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success mb-4 text-center">Atendimentos Mensais - 2025</h4>
+    <canvas id="graficoAtendimento" height="100"></canvas>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-primary mb-4 text-center">Regularizações Fundiárias - Últimos 6 meses</h4>
+    <canvas id="graficoRegularizacao" height="100"></canvas>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-danger mb-4 text-center">Indicadores de Gestão Urbana</h4>
+    <canvas id="graficoRadar" height="100"></canvas>
+  </div>
+</section>
+
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success mb-4">Linha do Tempo de Respostas</h4>
+    <ul class="timeline">
+      <li><strong>Em até 24h:</strong> Confirmação de recebimento</li>
+      <li><strong>Em até 3 dias úteis:</strong> Análise inicial</li>
+      <li><strong>Em até 7 dias úteis:</strong> Resposta formal ou encaminhamento</li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('graficoAtendimento').getContext('2d');
+  const graficoAtendimento = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago'],
+      datasets: [{
+        label: 'Atendimentos',
+        data: [120, 150, 180, 170, 210, 230, 190, 220],
+        backgroundColor: 'rgba(25, 135, 84, 0.7)', // Bootstrap success green
+        borderColor: 'rgba(25, 135, 84, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.raw} atendimentos`
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Quantidade' }
+        },
+        x: {
+          title: { display: true, text: 'Mês' }
+        }
+      }
+    }
+  });
+</script>
+
+
+
+<script>
+  const ctx2 = document.getElementById('graficoRegularizacao').getContext('2d');
+  const graficoRegularizacao = new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+      datasets: [{
+        label: 'Lotes Regularizados',
+        data: [30, 45, 40, 60, 75, 90],
+        borderColor: 'rgba(13, 110, 253, 1)', // Bootstrap primary blue
+        backgroundColor: 'rgba(13, 110, 253, 0.1)',
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true },
+        x: { title: { display: true, text: 'Mês' } }
+      }
+    }
+  });
+</script>
+
+
+
+<script>
+  const ctx3 = document.getElementById('graficoRadar').getContext('2d');
+  const graficoRadar = new Chart(ctx3, {
+    type: 'radar',
+    data: {
+      labels: ['Infraestrutura', 'Regularização', 'Habitação', 'Acessibilidade', 'Sustentabilidade', 'Mobilidade'],
+      datasets: [{
+        label: 'Desempenho',
+        data: [85, 90, 75, 65, 70, 80],
+        backgroundColor: 'rgba(220, 53, 69, 0.2)',
+        borderColor: 'rgba(220, 53, 69, 1)',
+        pointBackgroundColor: 'rgba(220, 53, 69, 1)'
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        r: {
+          suggestedMin: 0,
+          suggestedMax: 100
+        }
+      }
+    }
+  });
+</script>
+
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="p-4 bg-white shadow rounded">
+          <h2 class="text-success">325</h2>
+          <p class="text-muted">Famílias Regularizadas</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white shadow rounded">
+          <h2 class="text-success">58</h2>
+          <p class="text-muted">Projetos em Execução</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white shadow rounded">
+          <h2 class="text-success">12</h2>
+          <p class="text-muted">Programas Ativos</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 bg-white shadow rounded">
+          <h2 class="text-success">92%</h2>
+          <p class="text-muted">Satisfação dos Usuários</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,323 @@
+{% extends 'site/base_site.html' %}
+{% load static %}
+
+{% block title %}Legislação - IDURB Marabá{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="bg-dark text-white py-5" style="background-image: url('{% static 'assets/dist/img/Lei-Organica-de-Maraba-2.jpg' %}'); background-size: cover; background-position: center;">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Legislação</h1>
+    <p class="lead">Transparência e legalidade para o desenvolvimento urbano de Marabá</p>
+  </div>
+</section>
+
+<!-- ESTATÍSTICAS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 p-4">
+          <h2 class="text-success fw-bold">+25</h2>
+          <p class="text-muted mb-0">Leis e decretos publicados desde 2020</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 p-4">
+          <h2 class="text-success fw-bold">100%</h2>
+          <p class="text-muted mb-0">Acesso público aos documentos legais</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 p-4">
+          <h2 class="text-success fw-bold">+7 mil</h2>
+          <p class="text-muted mb-0">Famílias impactadas positivamente</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITAÇÃO -->
+<section class="py-4 bg-white text-center border-start border-success border-5">
+  <div class="container">
+    <blockquote class="blockquote fs-5 text-muted">
+      “A legalidade é a base para o crescimento urbano sustentável e justo.”
+    </blockquote>
+    <figcaption class="blockquote-footer mt-2">
+      Instituto de Desenvolvimento Urbano de Marabá – <cite>IDURB</cite>
+    </figcaption>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-success fw-bold mb-4 text-center"><i class="fas fa-stream me-2"></i>Principais Marcos Legislativos</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">2021</span>
+        <div class="timeline-content">
+          <h5>Criação do IDURB</h5>
+          <p>Lei Municipal Nº 18.123/2021 oficializa o Instituto como órgão gestor de políticas urbanas.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2022</span>
+        <div class="timeline-content">
+          <h5>Regulamentação Fundiária</h5>
+          <p>Publicação das normas de regularização de ocupações urbanas e habitação de interesse social.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2023</span>
+        <div class="timeline-content">
+          <h5>Plano Diretor Participativo</h5>
+          <p>Revisão do plano diretor com ampla participação popular e consulta pública digital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTOS EM DESTAQUE -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h4 class="text-success mb-4"><i class="fas fa-folder-open me-2"></i>Documentos Recentes</h4>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary"><i class="fas fa-file-pdf me-2"></i>Lei de Criação do IDURB</h6>
+            <p class="text-muted">Base jurídica do instituto</p>
+            <a href="{% static 'docs/lei_criacao_idurb.pdf' %}" class="btn btn-sm btn-outline-success" target="_blank">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary"><i class="fas fa-file-alt me-2"></i>Plano Diretor 2023</h6>
+            <p class="text-muted">Instrumento para o futuro urbano</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Acessar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h6 class="text-primary"><i class="fas fa-book me-2"></i>Manual de Regularização</h6>
+            <p class="text-muted">Etapas e modelos aplicáveis</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Visualizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+  <div class="container">
+    <h4 class="mb-4 text-success"><i class="fas fa-question-circle me-2"></i>Dúvidas Frequentes</h4>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            O que é considerado legislação urbana?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Leis, decretos, portarias e normativas municipais que tratam de uso do solo, habitação, urbanismo e mobilidade urbana.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Onde posso acessar todas as leis do IDURB?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Você pode acessar diretamente nesta página, no portal da prefeitura ou na Câmara Municipal de Marabá.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO JURÍDICO -->
+<section class="bg-success text-white text-center py-5">
+  <div class="container">
+    <h4 class="fw-bold">Precisa de ajuda com a legislação?</h4>
+    <p class="mb-3">Nossa equipe jurídica está pronta para te orientar.</p>
+    <a href="{% url 'contato' %}" class="btn btn-light">Fale com o Jurídico</a>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="text-success mb-4 text-center"><i class="fas fa-map-marked-alt me-2"></i>Aplicação Territorial das Leis</h4>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aff2ciU-ZoydiJOavu9JKx18TPn_Cv0&ehbc=2E312F" width="100%" height="480" style="border:0;" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-4"><i class="fas fa-chart-bar me-2"></i>Leis Publicadas por Ano</h4>
+    <canvas id="chartLeis"></canvas>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <h4 class="mb-4 text-success"><i class="fas fa-book-open me-2"></i>Biblioteca Temática</h4>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100 border-success">
+          <div class="card-body">
+            <h5 class="card-title text-primary"><i class="fas fa-home me-2"></i>Habitação</h5>
+            <p class="card-text text-muted">Normas sobre moradia popular e reassentamento urbano.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Acessar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100 border-success">
+          <div class="card-body">
+            <h5 class="card-title text-primary"><i class="fas fa-tree me-2"></i>Meio Ambiente</h5>
+            <p class="card-text text-muted">Leis ambientais urbanas e de áreas de preservação.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Visualizar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100 border-success">
+          <div class="card-body">
+            <h5 class="card-title text-primary"><i class="fas fa-road me-2"></i>Mobilidade</h5>
+            <p class="card-text text-muted">Regras de uso do solo e planejamento viário.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h4 class="text-success text-center mb-5"><i class="fas fa-history me-2"></i>Histórico Legislativo Ampliado</h4>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">2018</span>
+        <div class="timeline-content">
+          <h5>Lei de Zoneamento</h5>
+          <p>Estabelecimento de zonas residenciais, comerciais e mistas.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">2019</span>
+        <div class="timeline-content">
+          <h5>Revisão da Lei de Uso do Solo</h5>
+          <p>Novas diretrizes para áreas de expansão urbana e regularização.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 text-center">
+  <div class="container">
+    <h4 class="text-success mb-4"><i class="fas fa-comments me-2"></i>O que dizem sobre a nova legislação</h4>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <blockquote class="blockquote bg-white p-4 border-start border-4 border-success shadow-sm">
+          <p>“Agora tenho segurança jurídica sobre minha moradia. Foi um sonho realizado.”</p>
+          <footer class="blockquote-footer mt-2">Maria de Fátima, bairro São Miguel</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote bg-white p-4 border-start border-4 border-success shadow-sm">
+          <p>“As leis estão mais claras e acessíveis. Facilitou muito a vida de quem quer construir legalmente.”</p>
+          <footer class="blockquote-footer mt-2">João Carlos, engenheiro civil</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote bg-white p-4 border-start border-4 border-success shadow-sm">
+          <p>“O novo plano diretor trouxe esperança de desenvolvimento para nossa região.”</p>
+          <footer class="blockquote-footer mt-2">Ana Paula, líder comunitária</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ESTILO TIMELINE -->
+<style>
+.timeline {
+  position: relative;
+  margin-left: 1rem;
+  border-left: 3px solid #198754;
+}
+.timeline-item {
+  position: relative;
+  padding: 1rem 1rem 1rem 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 1rem;
+  width: 16px;
+  height: 16px;
+  background-color: #198754;
+  border-radius: 50%;
+}
+.timeline-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+</style>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctxLeis = document.getElementById('chartLeis').getContext('2d');
+  new Chart(ctxLeis, {
+    type: 'bar',
+    data: {
+      labels: ['2020', '2021', '2022', '2023', '2024'],
+      datasets: [{
+        label: 'Leis Publicadas',
+        data: [3, 6, 7, 5, 8],
+        backgroundColor: '#198754'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      }
+    }
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "site/base_site.html" %}
+{% load static %}
+
+{% block title %}Sobre o IDURB - Instituto de Desenvolvimento Urbano de Marabá{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Título Central -->
+    <div class="row mb-5 text-center">
+      <div class="col">
+        <h2 class="display-5 fw-bold text-success">Sobre o IDURB</h2>
+        <p class="text-muted fs-5">Instituto de Desenvolvimento Urbano de Marabá</p>
+      </div>
+    </div>
+
+    <!-- Missão + Imagem -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="{% static 'assets/dist/img/sobre-idurb.jpg' %}" alt="IDURB Marabá" class="img-fluid rounded shadow border">
+      </div>
+      <div class="col-lg-6">
+        <div class="p-3 bg-white rounded shadow-sm">
+          <h3 class="text-primary mb-3"><i class="fas fa-bullseye me-2"></i>Nossa Missão</h3>
+          <p class="text-muted">
+            O IDURB é responsável pelo planejamento, execução e acompanhamento das políticas de desenvolvimento urbano e fundiário do município de Marabá. Nosso foco é a modernização, regularização fundiária e melhoria da infraestrutura urbana, priorizando sempre a qualidade de vida da população.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visão e Valores em Cards -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-success"><i class="fas fa-eye me-2"></i>Visão</h4>
+            <p class="card-text text-muted">
+              Ser referência em desenvolvimento urbano sustentável na região Norte do Brasil.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title text-success"><i class="fas fa-handshake me-2"></i>Valores</h4>
+            <ul class="text-muted mb-0">
+              <li>Transparência e ética</li>
+              <li>Inovação e eficiência</li>
+              <li>Compromisso social</li>
+              <li>Gestão participativa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
