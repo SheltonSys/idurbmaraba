@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-xkvnzhzz^mk4*ob1q)s0)w_+j_0xfa4z7bsov$89)x9i-z-ck_
 DEBUG = True
 ALLOWED_HOSTS = ['34.239.127.118', 'localhost', '127.0.0.1']
 
-# App definitions
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -85,3 +85,4 @@ LOGIN_REDIRECT_URL = '/painel/'
 LOGOUT_REDIRECT_URL = '/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+6
