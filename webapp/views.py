@@ -20,14 +20,20 @@ def sobre(request):
     return render(request, 'webapp/sobre.html')
 
 
+from django.contrib import messages
+from django.shortcuts import render
+
 def contato(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')
         email = request.POST.get('email')
         mensagem = request.POST.get('mensagem')
-        # Aqui você pode adicionar lógica para salvar ou enviar o e-mail
 
-    return render(request, 'webapp/contato.html')
+        # Exemplo: salvar ou enviar e-mail (aqui apenas uma mensagem de sucesso)
+        messages.success(request, 'Mensagem enviada com sucesso! Em breve entraremos em contato.')
+
+    return render(request, 'site/contato.html')
+
 
 
 
