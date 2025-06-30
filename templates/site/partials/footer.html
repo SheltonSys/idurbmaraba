@@ -4,12 +4,11 @@
   <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 
   <div class="container position-relative">
-    <div class="row text-center text-md-start">
-
-      <!-- Coluna 1: Logo e redes -->
-      <div class="col-md-3 mb-4">
-        <img src="{% static 'assets/dist/img/logoidurb.png' %}" alt="IDURB Marabá" class="mb-3" style="max-height: 60px;">
-        <p class="small text-muted">Instituto de Desenvolvimento Urbano de Marabá</p>
+    <!-- LOGO + REDES FIXO -->
+    <div class="row mb-4 text-center text-md-start">
+      <div class="col-md-4">
+        <img src="{% static 'assets/dist/img/logosdu3.png' %}" alt="SDU Marabá" class="mb-3" style="max-height: 160px;">
+        <p class="small text-muted">Secretaria de Desenvolvimento Urbano de Marabá</p>
         <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-2">
           <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
@@ -18,45 +17,224 @@
         </div>
       </div>
 
-      <!-- Coluna 2: Links úteis -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold text-uppercase mb-3">Links Úteis</h6>
-        <ul class="list-unstyled small">
-          <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i> Serviços</a></li>
-          <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i> Programas</a></li>
-          <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i> Transparência</a></li>
-          <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i> Legislação</a></li>
-          <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i> Ouvidoria</a></li>
+      <!-- Newsletter e badges -->
+<div class="col-md-4 mt-4 mt-md-0">
+  <h6 class="fw-bold text-uppercase mb-3">Receba novidades</h6>
+  <p class="small text-light">Informe seu e-mail institucional para receber informativos e comunicados oficiais diretamente da SDU Marabá.</p>
+  <form>
+    <div class="input-group mb-3 shadow-sm">
+      <input type="email" class="form-control form-control-sm rounded-start" placeholder="Seu e-mail" required>
+      <button class="btn btn-success btn-sm rounded-end" type="submit"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </form>
+
+  <!-- Badges elegantes -->
+  <div class="mt-3 d-flex flex-wrap gap-2">
+    <span class="badge bg-success bg-gradient text-uppercase px-3 py-2 rounded-pill shadow-sm">
+      <i class="fas fa-universal-access me-1"></i> Acessível
+    </span>
+    <span class="badge bg-info bg-opacity-75 text-dark text-uppercase px-3 py-2 rounded-pill shadow-sm">
+      <i class="fas fa-balance-scale me-1"></i> Transparente
+    </span>
+    <span class="badge bg-warning bg-opacity-75 text-dark text-uppercase px-3 py-2 rounded-pill shadow-sm">
+      <i class="fas fa-lock me-1"></i> Seguro
+    </span>
+    <span class="badge bg-primary bg-opacity-75 text-white text-uppercase px-3 py-2 rounded-pill shadow-sm">
+      <i class="fas fa-mobile-alt me-1"></i> Mobile Ready
+    </span>
+  </div>
+</div>
+
+
+
+
+<div class="col-md-4 mt-4 mt-md-0">
+  <h6 class="fw-bold text-uppercase mb-3">Contato</h6>
+
+  <ul class="list-unstyled small">
+    <li class="mb-3 d-flex align-items-start">
+      <span class="badge bg-success bg-opacity-75 rounded-circle me-3 p-2 shadow-sm">
+        <i class="fas fa-map-marker-alt text-white"></i>
+      </span>
+      <span>Folha 31 – Paço Municipal</span>
+    </li>
+
+    <li class="mb-3 d-flex align-items-start">
+      <span class="badge bg-success bg-opacity-75 rounded-circle me-3 p-2 shadow-sm">
+        <i class="fas fa-location-dot text-white"></i>
+      </span>
+      <span>Nova Marabá – Marabá/PA</span>
+    </li>
+
+    <li class="mb-3 d-flex align-items-start">
+      <span class="badge bg-success bg-opacity-75 rounded-circle me-3 p-2 shadow-sm">
+        <i class="fas fa-envelope text-white"></i>
+      </span>
+      <span>
+        <a href="mailto:contato@maraba.pa.gov.br" class="text-white text-decoration-none">
+          contato@maraba.pa.gov.br
+        </a>
+      </span>
+    </li>
+
+    <li class="mb-3 d-flex align-items-start">
+      <span class="badge bg-success bg-opacity-75 rounded-circle me-3 p-2 shadow-sm">
+        <i class="fas fa-phone text-white"></i>
+      </span>
+      <span>(94) 3322-2982</span>
+    </li>
+
+    <li class="d-flex align-items-start">
+      <span class="badge bg-success bg-opacity-75 rounded-circle me-3 p-2 shadow-sm">
+        <i class="fas fa-clock text-white"></i>
+      </span>
+      <span>08:00 às 14:00 – Segunda à Sexta</span>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+    <!-- ACCORDION PARA MOBILE -->
+<div class="accordion d-md-none" id="footerAccordion">
+
+  <!-- Links Úteis -->
+  <div class="accordion-item bg-transparent border-0">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#linksUteis">
+        <span class="badge bg-success rounded-pill me-2"><i class="fas fa-link"></i></span> Links Úteis
+      </button>
+    </h2>
+    <div id="linksUteis" class="accordion-collapse collapse">
+      <div class="accordion-body small ps-4">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Serviços</a></li>
+          <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Programas</a></li>
+          <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Transparência</a></li>
+          <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Legislação</a></li>
+          <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Ouvidoria</a></li>
         </ul>
       </div>
-
-      <!-- Coluna 3: Contato -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold text-uppercase mb-3">Contato</h6>
-        <p class="mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> Folha 31 – Paço Municipal</p>
-        <p class="mb-2"><i class="fas fa-location-dot text-success me-2"></i> Nova Marabá – Marabá/PA</p>
-        <p class="mb-2"><i class="fas fa-envelope text-success me-2"></i> <a href="mailto:contato@maraba.pa.gov.br" class="text-white text-decoration-none">contato@maraba.pa.gov.br</a></p>
-        <p class="mb-2"><i class="fas fa-phone text-success me-2"></i> (94) 3322-2982</p>
-        <p><i class="fas fa-clock text-success me-2"></i> 08:00 às 14:00 – Segunda à Sexta</p>
-      </div>
-
-      <!-- Coluna 4: Newsletter ou Acessibilidade -->
-      <div class="col-md-3 mb-4">
-        <h6 class="fw-bold text-uppercase mb-3">Receba novidades</h6>
-        <p class="small">Cadastre seu e-mail institucional para receber informativos e comunicados oficiais.</p>
-        <form>
-          <div class="input-group mb-3">
-            <input type="email" class="form-control form-control-sm" placeholder="Seu e-mail">
-            <button class="btn btn-success btn-sm" type="submit"><i class="fas fa-paper-plane"></i></button>
-          </div>
-        </form>
-        <div class="mt-3">
-          <span class="badge bg-success">Acessível</span>
-          <span class="badge bg-info text-dark">Transparente</span>
-        </div>
-      </div>
-
     </div>
+  </div>
+
+  <!-- Institucional -->
+  <div class="accordion-item bg-transparent border-0">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#institucional">
+        <span class="badge bg-primary rounded-pill me-2"><i class="fas fa-building"></i></span> Institucional
+      </button>
+    </h2>
+    <div id="institucional" class="accordion-collapse collapse">
+      <div class="accordion-body small ps-4">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Missão e Visão</a></li>
+          <li><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Equipe Técnica</a></li>
+          <li><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Histórico</a></li>
+          <li><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Organograma</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transparência Pública -->
+  <div class="accordion-item bg-transparent border-0">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#transparencia">
+        <span class="badge bg-info text-dark rounded-pill me-2"><i class="fas fa-chart-line"></i></span> Transparência Pública
+      </button>
+    </h2>
+    <div id="transparencia" class="accordion-collapse collapse">
+      <div class="accordion-body small ps-4">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Relatórios</a></li>
+          <li><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Prestação de Contas</a></li>
+          <li><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Planejamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legislação Urbana -->
+  <div class="accordion-item bg-transparent border-0">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#legislacao">
+        <span class="badge bg-warning text-dark rounded-pill me-2"><i class="fas fa-gavel"></i></span> Legislação Urbana
+      </button>
+    </h2>
+    <div id="legislacao" class="accordion-collapse collapse">
+      <div class="accordion-body small ps-4">
+        <ul class="list-unstyled mb-0">
+          <li><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Plano Diretor</a></li>
+          <li><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Código de Obras</a></li>
+          <li><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Uso do Solo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- VISÃO DESKTOP: GRIDS -->
+<div class="row d-none d-md-flex mt-4">
+
+  <!-- Links Úteis -->
+  <div class="col-md-3 mb-4">
+    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+      <span class="badge bg-success rounded-pill me-2 shadow-sm"><i class="fas fa-link"></i></span> Links Úteis
+    </h6>
+    <ul class="list-unstyled small ps-1">
+      <li class="mb-2"><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Serviços</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Programas</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Transparência</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Legislação</a></li>
+      <li><i class="fas fa-angle-right text-success me-2"></i><a href="#" class="text-white text-decoration-none">Ouvidoria</a></li>
+    </ul>
+  </div>
+
+  <!-- Institucional -->
+  <div class="col-md-3 mb-4">
+    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+      <span class="badge bg-primary rounded-pill me-2 shadow-sm"><i class="fas fa-building"></i></span> Institucional
+    </h6>
+    <ul class="list-unstyled small ps-1">
+      <li class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Missão e Visão</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Equipe Técnica</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Histórico</a></li>
+      <li><i class="fas fa-angle-right text-primary me-2"></i><a href="#" class="text-white text-decoration-none">Organograma</a></li>
+    </ul>
+  </div>
+
+  <!-- Transparência -->
+  <div class="col-md-3 mb-4">
+    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+      <span class="badge bg-info text-dark rounded-pill me-2 shadow-sm"><i class="fas fa-chart-line"></i></span> Transparência
+    </h6>
+    <ul class="list-unstyled small ps-1">
+      <li class="mb-2"><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Relatórios</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Prestação de Contas</a></li>
+      <li><i class="fas fa-angle-right text-info me-2"></i><a href="#" class="text-white text-decoration-none">Planejamento</a></li>
+    </ul>
+  </div>
+
+  <!-- Legislação Urbana -->
+  <div class="col-md-3 mb-4">
+    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+      <span class="badge bg-warning text-dark rounded-pill me-2 shadow-sm"><i class="fas fa-gavel"></i></span> Legislação Urbana
+    </h6>
+    <ul class="list-unstyled small ps-1">
+      <li class="mb-2"><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Plano Diretor</a></li>
+      <li class="mb-2"><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Código de Obras</a></li>
+      <li><i class="fas fa-angle-right text-warning me-2"></i><a href="#" class="text-white text-decoration-none">Uso do Solo</a></li>
+    </ul>
+  </div>
+
+</div>
+
 
     <hr class="border-secondary mt-4">
     <p class="text-center text-muted small mb-0">© 2025 – Instituto de Desenvolvimento Urbano de Marabá – Pará. Todos os direitos reservados.</p>

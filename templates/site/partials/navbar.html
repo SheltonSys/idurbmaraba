@@ -23,7 +23,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="/">
       <img src="{% static 'assets/dist/img/prefeituraMaraba.png' %}" alt="Prefeitura Marabá" width="130" class="me-2">
-      <img src="{% static 'assets/dist/img/logoidurb.png' %}" alt="IDURB Marabá" width="130" class="me-2">
+      <img src="{% static 'assets/dist/img/logosdu.png' %}" alt="SDU Marabá" width="80" class="me-2">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
@@ -36,7 +36,7 @@
           <a class="nav-link {% if request.path == '/' %}active text-white bg-success rounded px-3 fw-bold{% endif %}" href="/">INÍCIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.path == '/oidurb/' %}active fw-bold text-success{% endif %}" href="/oidurb/">O IDURB</a>
+          <a class="nav-link {% if request.path == '/oidurb/' %}active fw-bold text-success{% endif %}" href="/oidurb/">A SDU</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {% if request.path == '/legislacao/' %}active fw-bold text-success{% endif %}" href="/legislacao/">LEGISLAÇÃO</a>
@@ -53,6 +53,20 @@
         <li class="nav-item">
           <a class="nav-link {% if request.path == '/contato/' %}active fw-bold text-success{% endif %}" href="/contato/">FALE CONOSCO</a>
         </li>
+
+<li class="nav-item">
+<a class="nav-link d-flex align-items-center {% if request.path == '/painel/' %}active fw-bold text-success{% endif %}" href="/painel/">
+  <i class="fas fa-cogs me-1"></i>
+  <span class="d-none d-md-inline">Área ADM</span>
+</a>
+
+
+</li>
+
+
+
+
+
       </ul>
     </div>
   </div>

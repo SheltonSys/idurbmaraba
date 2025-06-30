@@ -45,3 +45,16 @@ class MensagemContato(models.Model):
 
     def __str__(self):
         return f"{self.nome} - {self.email}"
+
+
+
+# models.py
+class Noticia(models.Model):
+    titulo = models.CharField(max_length=200)
+    conteudo = models.TextField()
+    imagem = models.ImageField(upload_to='noticias/', blank=True, null=True)
+    data_publicacao = models.DateField(auto_now_add=True, editable=False)
+    publicado = models.BooleanField(default=False)  # <-- adicione isso
+
+    def __str__(self):
+        return self.titulo

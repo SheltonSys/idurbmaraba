@@ -1,0 +1,160 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDU Marabá | Login</title>
+
+  <!-- Fontes e Estilos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=fallback">
+  <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome-free/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/dist/css/adminlte.min.css' %}">
+
+  <style>
+    body {
+      background: url("{% static 'assets/dist/img/fundo-login.png' %}") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .login-box {
+      width: 420px;
+      margin: 10vh auto 0 auto;
+    }
+
+    .login-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-logo img {
+      max-width: 220px;  /* aumento da logo */
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .login-logo small {
+      color: #ffffffcc;
+      font-size: 14px;
+      display: block;
+    }
+
+    .login-card-body {
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .form-control:focus {
+      border-color: #007a33;
+      box-shadow: none;
+    }
+
+    .btn-success {
+      background-color: #007a33;
+      border-color: #007a33;
+    }
+
+    .btn-success:hover {
+      background-color: #005c27;
+    }
+
+    .login-box-msg {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .alert {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body class="hold-transition">
+
+<div class="login-box">
+  <div class="login-logo">
+    <img src="{% static 'assets/dist/img/logosdu3.png' %}" alt="SDU Logo">
+    <!-- <small>Sistema de Acesso</small> -->
+  </div>
+
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Acesse sua conta</p>
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% if form.errors %}
+          <div class="alert alert-danger text-center">Usuário ou senha inválidos</div>
+        {% endif %}
+
+        <div class="input-group mb-3">
+          {{ form.username|add_class:"form-control" }}
+          <div class="input-group-append">
+            <div class="input-group-text"><i class="fas fa-user"></i></div>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+  {{ form.password|add_class:"form-control"|attr:"id:password" }}
+  <div class="input-group-append">
+    <div class="input-group-text">
+      <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+    </div>
+  </div>
+</div>
+
+
+
+        <div class="row mb-3">
+          <div class="col-6">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">Lembrar</label>
+            </div>
+          </div>
+          <div class="col-6 text-right">
+            <button type="submit" class="btn btn-success btn-block">Entrar</button>
+          </div>
+        </div>
+      </form>
+
+      <p class="mb-1 text-center">
+        <a href="#">Esqueci minha senha</a>
+      </p>
+      <p class="mb-0 text-center">
+        <a href="#">Registrar nova conta</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/dist/js/adminlte.min.js' %}"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
+    });
+  });
+</script>
+
+
+</body>
+</html>

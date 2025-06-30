@@ -1,0 +1,159 @@
+{% load static %}
+
+
+
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Logo -->
+  <a href="{% url 'dashboard' %}" class="brand-link">
+    <img src="{% static 'assets/dist/img/logosdu3.png' %}" alt="Logo IDURB" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">SDU Marabá</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <!-- Usuário -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="{% static 'assets/dist/img/logosdu3.png' %}" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        {% if request.user.is_authenticated %}
+          <a href="#" class="d-block">
+            {{ request.user.get_full_name|default:request.user.username }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Busca -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Buscar">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar"><i class="fas fa-search fa-fw"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <a href="{% url 'dashboard' %}" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+
+        <!-- Conteúdo -->
+        <li class="nav-header">GESTÃO DE CONTEÚDO</li>
+
+        <li class="nav-item">
+          <a href="{% url 'noticias_listar' %}" class="nav-link">
+            <i class="nav-icon fas fa-newspaper"></i>
+            <p>Notícias</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'servicos_listar' %}" class="nav-link">
+            <i class="nav-icon fas fa-tools"></i>
+            <p>Serviços</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'sistemas_listar' %}" class="nav-link">
+            <i class="nav-icon fas fa-desktop"></i>
+            <p>Sistemas</p>
+          </a>
+        </li>
+
+        <!-- Institucional -->
+        <li class="nav-header">INSTITUCIONAL</li>
+
+        <li class="nav-item">
+          <a href="{% url 'equipe_listar' %}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>Equipe Técnica</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'organograma' %}" class="nav-link">
+            <i class="nav-icon fas fa-sitemap"></i>
+            <p>Organograma</p>
+          </a>
+        </li>
+
+        <!-- Transparência -->
+        <li class="nav-header">TRANSPARÊNCIA</li>
+
+        <li class="nav-item">
+          <a href="{% url 'relatorios' %}" class="nav-link">
+            <i class="nav-icon fas fa-file-alt"></i>
+            <p>Relatórios</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'prestacao_contas' %}" class="nav-link">
+            <i class="nav-icon fas fa-balance-scale"></i>
+            <p>Prestação de Contas</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'planejamento' %}" class="nav-link">
+            <i class="nav-icon fas fa-project-diagram"></i>
+            <p>Planejamento</p>
+          </a>
+        </li>
+
+        <!-- Legislação -->
+        <li class="nav-header">LEGISLAÇÃO URBANA</li>
+
+        <li class="nav-item">
+          <a href="{% url 'plano_diretor' %}" class="nav-link">
+            <i class="nav-icon fas fa-map"></i>
+            <p>Plano Diretor</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'codigo_obras' %}" class="nav-link">
+            <i class="nav-icon fas fa-building"></i>
+            <p>Código de Obras</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'uso_solo' %}" class="nav-link">
+            <i class="nav-icon fas fa-city"></i>
+            <p>Uso do Solo</p>
+          </a>
+        </li>
+
+        <!-- Contato -->
+        <li class="nav-header">SUPORTE</li>
+        <li class="nav-item">
+          <a href="{% url 'contato' %}" class="nav-link">
+            <i class="nav-icon fas fa-envelope"></i>
+            <p>Fale Conosco</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="{% url 'logout' %}" class="nav-link text-danger">
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>Sair</p>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

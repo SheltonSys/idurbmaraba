@@ -1,0 +1,69 @@
+{% extends 'base_admin.html' %}
+{% load static %}
+
+{% block title %}Início | SDU{% endblock %}
+
+{% block content_header %}
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Página Inicial</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Início</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bem-vindo ao sistema da SDU</h5>
+        <p class="card-text">Aqui você encontra informações e funcionalidades principais do painel.</p>
+        <a href="#" class="card-link">Acessar módulo</a>
+        <a href="#" class="card-link">Ajuda</a>
+      </div>
+    </div>
+
+    <div class="card card-primary card-outline">
+      <div class="card-body">
+        <h5 class="card-title">Informativo</h5>
+        <p class="card-text">Fique atento às atualizações e comunicados importantes do sistema.</p>
+        <a href="#" class="card-link">Ver mais</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="m-0">Avisos</h5>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Atenção às datas</h6>
+        <p class="card-text">As próximas etapas de lançamento serão iniciadas em breve.</p>
+        <a href="#" class="btn btn-primary">Ver cronograma</a>
+      </div>
+    </div>
+
+    <div class="card card-primary card-outline">
+      <div class="card-header">
+        <h5 class="m-0">Suporte</h5>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Precisa de ajuda?</h6>
+        <p class="card-text">Acesse a central de suporte para dúvidas frequentes e tutoriais.</p>
+        <a href="#" class="btn btn-primary">Acessar suporte</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
